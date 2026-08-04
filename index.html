@@ -1,209 +1,1882 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Muhammad Awais — Portfolio</title>
-  <meta name="description" content="Portfolio of Muhammad Awais — Front-end developer & Computer Science student." />
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Muhammad Awais | Web Developer & AI/ML Enthusiast</title>
+
+  <meta
+    name="description"
+    content="Muhammad Awais — Web Developer, Python Developer and AI/ML Enthusiast."
+  >
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#020308">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Muhammad Awais | Web Developer & AI/ML Enthusiast">
+  <meta property="og:description" content="Muhammad Awais — Web Developer, Python Developer and AI/ML Enthusiast. Explore projects in web development, AI and machine learning.">
+  <meta property="og:image" content="profile.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Muhammad Awais | Web Developer & AI/ML Enthusiast">
+  <meta name="twitter:description" content="Web Developer, Python Developer and AI/ML Enthusiast — modern digital experiences and intelligent applications.">
+  <meta name="twitter:image" content="profile.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Muhammad Awais",
+    "jobTitle": "Web Developer",
+    "url": "",
+    "email": "mailto:m.awaisk118@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/muhammad-awais-376527292"
+    ],
+    "knowsAbout": [
+      "Web Development",
+      "Python",
+      "Artificial Intelligence",
+      "Machine Learning"
+    ]
+  }
+  </script>
+
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  >
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#home" class="brand">Muhammad <span>Awais</span></a>
 
-      <nav id="navbar" class="nav">
-        <ul class="nav-list">
-          <li><a href="#home" class="nav-link active">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
+  <!-- =========================================
+       CINEMATIC LOADER
+  ========================================== -->
+
+  <div id="scene-loader">
+
+    <div class="loader-content">
+
+      <div class="loader-logo">
+        MA<span>.</span>
+      </div>
+
+      <div class="loader-line">
+        <span></span>
+      </div>
+
+      <p>INITIALIZING EXPERIENCE</p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+       3D BACKGROUND
+  ========================================== -->
+
+  <canvas id="hero-3d"></canvas>
+
+  <div class="noise"></div>
+
+
+  <!-- =========================================
+       NAVBAR
+  ========================================== -->
+
+  <header class="site-header">
+
+    <div class="nav-container">
+
+      <a href="#home" class="logo">
+        MA<span>.</span>
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Open navigation"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+
+
+      <nav class="navbar" id="navbar">
+
+        <a href="#home" class="nav-link active">
+          Home
+        </a>
+
+        <a href="#about" class="nav-link">
+          About
+        </a>
+
+        <a href="#skills" class="nav-link">
+          Skills
+        </a>
+
+        <a href="#experience" class="nav-link">
+          Experience
+        </a>
+
+        <a href="#projects" class="nav-link">
+          Projects
+        </a>
+
+        <a href="#certificate" class="nav-link">
+          Certificate
+        </a>
+
+        <a href="#contact" class="nav-link">
+          Contact
+        </a>
+
       </nav>
 
-      <div class="header-actions">
-        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">☾</button>
-        <button id="nav-toggle" class="icon-btn nav-toggle" aria-label="Open menu">≡</button>
-      </div>
+
+      <a href="#contact" class="nav-cta">
+        Let's Talk
+        <i class="bi bi-arrow-up-right"></i>
+      </a>
+
     </div>
+
   </header>
 
+
+  <!-- =========================================
+       HERO
+  ========================================== -->
+
   <main>
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="neon-blobs" aria-hidden="true">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-      </div>
 
-      <div class="container hero-inner">
-        <!-- LEFT CONTENT -->
-        <div class="hero-left">
-          <h1 class="hero-title">Hi, I’m <span>Muhammad Awais</span></h1>
-          <p class="typing" id="typing"></p>
-          <p class="hero-sub">Computer Science student • Front-End Developer • Python enthusiast</p>
-          <div class="cta">
-            <a href="#projects" class="btn btn-primary">See Projects</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
-          </div>
-          <div class="socials">
-            <a href="https://www.linkedin.com/in/muhammad-awais-376527292" target="_blank" rel="noopener" class="social">LinkedIn</a>
-            <a href="#" target="_blank" rel="noopener" class="social">GitHub</a>
-          </div>
+    <section id="home" class="cinematic-hero">
+
+      <div class="hero-grid"></div>
+
+      <div class="hero-content">
+
+        <div class="hero-kicker">
+          <span class="status-dot"></span>
+          AVAILABLE FOR OPPORTUNITIES
         </div>
 
-        <!-- RIGHT CARD -->
-        <aside class="hero-right card glass">
-          <button class="btn btn-primary hire-me-btn">Hire Me</button>
-          <div class="avatar-wrap">
-            <img src="profile.jpg" alt="Muhammad Awais" class="avatar">
-            <div class="avatar-glow"></div>
-          </div>
-          <div class="info">
-            <h3>Muhammad Awais</h3>
-            <p>Front-End Developer & B.Sc. Computer Science</p>
-            <ul class="meta">
-              <li>📍 Rawalpindi</li>
-              <li>✉️ <a href="mailto:m.awaisk118@gmail.com">m.awaisk118@gmail.com</a></li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">About</h2>
-        <div class="about-grid">
-          <div class="about-left card glass reveal">
-            <p>I am a Computer Science student working on front-end development and machine learning projects. I build responsive, accessible interfaces using modern HTML/CSS and JavaScript.</p>
-            <ul class="bullets">
-              <li>Responsive UI & UX</li>
-              <li>JavaScript (ES6+), React (learning)</li>
-              <li>Python, Flask, Machine Learning basics</li>
-            </ul>
-          </div>
-
-          <div class="about-right card glass reveal">
-            <h4>Education</h4>
-            <p>B.Sc. Computer Science — Federal Urdu University (2023–2027)</p>
-            <h4>Tools</h4>
-            <p>VS Code, Git, Chrome DevTools, Visual Studio</p>
-          </div>
+        <div class="developer-name">
+          <span class="name-line">Muhammad</span>
+          <span class="name-line">Awais</span>
         </div>
-      </div>
-    </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-          <div class="skill card glass reveal">
-            <h4>HTML & CSS</h4>
-            <div class="skill-bar"><span style="width:90%"></span></div>
-          </div>
-          <div class="skill card glass reveal">
-            <h4>JavaScript</h4>
-            <div class="skill-bar"><span style="width:50%"></span></div>
-          </div>
-          <div class="skill card glass reveal">
-            <h4>Python</h4>
-            <div class="skill-bar"><span style="width:75%"></span></div>
-          </div>
-          <div class="skill card glass reveal">
-            <h4>C#</h4>
-            <div class="skill-bar"><span style="width:60%"></span></div>
-          </div>
+        <div class="developer-role">
+          <span class="role-prefix">I AM A</span>
+          <span id="hero-role-text"></span>
+          <span class="typing-cursor">|</span>
         </div>
+
+
+        <p class="hero-description">
+          I create modern digital experiences, intelligent
+          AI applications and Python-powered solutions
+          with a focus on clean design and real-world impact.
+        </p>
+
+
+        <div class="hero-actions">
+
+          <a
+            href="#projects"
+            class="hero-btn hero-btn-primary"
+          >
+            <span>Explore My Work</span>
+            <i class="bi bi-arrow-down-right"></i>
+          </a>
+
+
+          <a
+            href="#contact"
+            class="hero-btn hero-btn-secondary"
+          >
+            <span>Let's Connect</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+
+
+          <a
+            href="resume.pdf"
+            download
+            class="hero-btn hero-btn-ghost"
+          >
+            <span>Resume</span>
+            <i class="bi bi-download"></i>
+          </a>
+
+        </div>
+
+
+        <div class="hero-socials">
+
+          <a
+            href="https://www.linkedin.com/in/muhammadawaiscs"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+
+          <a
+            href="https://github.com/awais-site"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+
+          <a
+            href="mailto:m.awaisk118@gmail.com"
+            aria-label="Email"
+          >
+            <i class="bi bi-envelope"></i>
+          </a>
+
+        </div>
+
       </div>
+
+
+      <!-- 3D PROFILE -->
+      <div class="hero-profile">
+
+        <div class="profile-orbit orbit-one"></div>
+        <div class="profile-orbit orbit-two"></div>
+
+        <div class="profile-glow"></div>
+
+        <div class="profile-frame">
+
+          <div class="frame-corner corner-tl"></div>
+          <div class="frame-corner corner-tr"></div>
+          <div class="frame-corner corner-bl"></div>
+          <div class="frame-corner corner-br"></div>
+
+          <img
+            src="profile.png"
+            alt="Muhammad Awais"
+            class="profile-image"
+          >
+
+        </div>
+
+
+        <div class="floating-card card-top">
+
+          <span class="floating-icon">
+            <i class="bi bi-code-slash"></i>
+          </span>
+
+          <div>
+            <strong>WEB</strong>
+            <small>DEVELOPMENT</small>
+          </div>
+
+        </div>
+
+
+        <div class="floating-card card-bottom">
+
+          <span class="floating-icon">
+            <i class="bi bi-cpu"></i>
+          </span>
+
+          <div>
+            <strong>AI / ML</strong>
+            <small>EXPLORING</small>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="scroll-indicator">
+
+        <span>SCROLL TO EXPLORE</span>
+
+        <div class="scroll-line"></div>
+
+      </div>
+
+
+      <div class="hero-index">
+        <span>01</span>
+        <span>/</span>
+        <span>07</span>
+      </div>
+
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
+
+    <!-- =========================================
+         ABOUT
+    ========================================== -->
+
+    <section id="about" class="section cinematic-section">
+
+      <div class="section-number">
+        02
+      </div>
+
       <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-          <article class="project card glass reveal">
-            <div class="project-media" style="background-image:url('project1.jpg')"></div>
-            <div class="project-body">
-              <h3>Heart Disease Prediction</h3>
-              <p>ML web app built with Python & Flask. Preprocessing, model training and deployment.</p>
-              <div class="proj-links">
-                <a href="#">Live</a><a href="#">Code</a>
-              </div>
+
+        <div class="section-heading reveal">
+
+          <span class="section-kicker">
+            GET TO KNOW ME
+          </span>
+
+          <h2>
+            Turning ideas into
+            <span>digital experiences.</span>
+          </h2>
+
+        </div>
+
+
+        <div class="about-layout">
+
+          <div class="about-main glass-card reveal">
+
+            <div class="about-card-number">
+              01
             </div>
+
+            <h3>
+              Hello, I'm
+              <span>Muhammad Awais.</span>
+            </h3>
+
+            <p>
+              I'm a Computer Science student and developer
+              passionate about Web Development, Artificial
+              Intelligence, Machine Learning and Python.
+            </p>
+
+            <p>
+              I enjoy creating responsive websites,
+              intelligent applications and automation
+              solutions while continuously improving
+              my development skills.
+            </p>
+
+
+            <div class="about-tags">
+
+              <span>Web Development</span>
+              <span>Python</span>
+              <span>AI / ML</span>
+              <span>Automation</span>
+
+            </div>
+
+          </div>
+
+
+          <div class="about-info-panel reveal">
+
+            <div class="info-block">
+
+              <span class="info-label">
+                EDUCATION
+              </span>
+
+              <h4>
+                B.Sc. Computer Science
+              </h4>
+
+              <p>
+                Federal Urdu University · 2023–2027
+              </p>
+
+            </div>
+
+
+            <div class="info-block">
+
+              <span class="info-label">
+                CURRENT FOCUS
+              </span>
+
+              <h4>
+                Web Development & AI
+              </h4>
+
+              <p>
+                Modern frontend, Python, AI & Machine Learning
+              </p>
+
+            </div>
+
+
+            <div class="info-block">
+
+              <span class="info-label">
+                LOCATION
+              </span>
+
+              <h4>
+                Rawalpindi, Pakistan
+              </h4>
+
+              <p>
+                Open to remote opportunities
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         SKILLS
+    ========================================== -->
+
+    <section id="skills" class="section cinematic-section">
+
+      <div class="section-number">
+        03
+      </div>
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-kicker">
+            MY TOOLKIT
+          </span>
+
+          <h2>
+            Skills &
+            <span>Technologies.</span>
+          </h2>
+
+        </div>
+
+
+        <div class="skills-3d-grid">
+
+
+          <div class="skill-3d-card reveal">
+
+            <div class="skill-card-top">
+              <span>01</span>
+              <i class="bi bi-window"></i>
+            </div>
+
+            <h3>
+              Web Development
+            </h3>
+
+            <p>
+              Creating responsive and modern web interfaces
+              with clean and user-focused design.
+            </p>
+
+            <div class="tech-list">
+
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+
+            </div>
+
+          </div>
+
+
+          <div class="skill-3d-card reveal">
+
+            <div class="skill-card-top">
+              <span>02</span>
+              <i class="bi bi-terminal"></i>
+            </div>
+
+            <h3>
+              Python Development
+            </h3>
+
+            <p>
+              Building Python applications using OOP,
+              automation and problem-solving techniques.
+            </p>
+
+            <div class="tech-list">
+
+              <span>Python</span>
+              <span>OOP</span>
+              <span>Automation</span>
+              <span>Flask</span>
+
+            </div>
+
+          </div>
+
+
+          <div class="skill-3d-card reveal">
+
+            <div class="skill-card-top">
+              <span>03</span>
+              <i class="bi bi-cpu"></i>
+            </div>
+
+            <h3>
+              AI & Machine Learning
+            </h3>
+
+            <p>
+              Exploring intelligent applications and
+              machine learning solutions using Python.
+            </p>
+
+            <div class="tech-list">
+
+              <span>AI</span>
+              <span>Machine Learning</span>
+              <span>OpenCV</span>
+              <span>Data Science</span>
+
+            </div>
+
+          </div>
+
+
+          <div class="skill-3d-card reveal">
+
+            <div class="skill-card-top">
+              <span>04</span>
+              <i class="bi bi-git"></i>
+            </div>
+
+            <h3>
+              Tools & Workflow
+            </h3>
+
+            <p>
+              Using modern development tools and workflows
+              to build and manage real-world projects.
+            </p>
+
+            <div class="tech-list">
+
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>VS Code</span>
+              <span>Responsive Design</span>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         EXPERIENCE
+    ========================================== -->
+
+    <section
+      id="experience"
+      class="section cinematic-section experience-section"
+    >
+
+      <div class="section-number">
+        04
+      </div>
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-kicker">
+            MY EXPERIENCE
+          </span>
+
+          <h2>
+            Where I've
+            <span>worked.</span>
+          </h2>
+
+        </div>
+
+
+        <div class="experience-3d-card reveal">
+
+          <div class="experience-year">
+            2026
+          </div>
+
+
+          <div class="experience-content">
+
+            <span class="experience-type">
+              SUMMER INTERNSHIP
+            </span>
+
+            <h3>
+              Web Development Intern
+            </h3>
+
+            <h4>
+              Fauji Foundation Overseas Employment Services
+            </h4>
+
+            <p>
+              Worked on redesigning and improving the FF Overseas
+              Employment Services website with a focus on modern UI,
+              responsive design, navigation and overall user experience.
+            </p>
+
+
+            <div class="experience-tech">
+
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+              <span>Responsive Design</span>
+              <span>UI/UX</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         PROJECTS
+    ========================================== -->
+
+    <section
+      id="projects"
+      class="section cinematic-section projects-section"
+    >
+
+      <div class="section-number">
+        05
+      </div>
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-kicker">
+            SELECTED WORK
+          </span>
+
+          <h2>
+            Projects that
+            <span>matter.</span>
+          </h2>
+
+        </div>
+
+
+        <div class="projects-3d-grid">
+
+
+          <!-- PROJECT 01 -->
+
+          <article class="project-3d-card reveal">
+
+            <div class="project-visual project-web">
+
+              <span class="project-index">
+                01
+              </span>
+
+              <div class="project-mockup">
+
+                <div class="project-mockup-bar">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <img
+                  src="project3.jpg"
+                  alt="FF OES Website preview"
+                  loading="lazy"
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="project-content">
+
+              <span class="project-category">
+                WEB DEVELOPMENT
+              </span>
+
+              <h3>
+                FF OES Redesgin Website
+              </h3>
+
+              <p>
+                A modern responsive website redesign focused
+                on improved UI, navigation, usability and
+                overall user experience.
+              </p>
+
+
+              <div class="project-tech">
+
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Bootstrap</span>
+
+              </div>
+
+
+              <div class="project-links">
+
+                <a href="#" target="_blank">
+                  Live Demo
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+
+                <a href="#" target="_blank">
+                  GitHub
+                  <i class="bi bi-github"></i>
+                </a>
+
+              </div>
+
+            </div>
+
           </article>
 
-          <article class="project card glass reveal">
-            <div class="project-media" style="background-image:url('project2.jpg')"></div>
-            <div class="project-body">
-              <h3>Airline Reservation System</h3>
-              <p>Console/GUI Python project implementing booking, seat management and persistence.</p>
-              <div class="proj-links">
-                <a href="#">Demo</a><a href="#">Code</a>
-              </div>
+
+          <!-- PROJECT 02 -->
+
+          <article class="project-3d-card reveal">
+
+            <div class="project-visual project-ai">
+
+              <span class="project-index">
+                02
+              </span>
+
+              <i class="bi bi-robot project-big-icon"></i>
+
+              <div class="ai-rings"></div>
+
             </div>
+
+
+            <div class="project-content">
+
+              <span class="project-category">
+                AI / PYTHON
+              </span>
+
+              <h3>
+                JARVIS AI Assistant
+              </h3>
+
+              <p>
+                A Python-based personal AI assistant featuring
+                voice interaction, AI responses, GUI and
+                face recognition.
+              </p>
+
+
+              <div class="project-tech">
+
+                <span>Python</span>
+                <span>OpenAI</span>
+                <span>PyQt6</span>
+                <span>OpenCV</span>
+
+              </div>
+
+
+              <div class="project-links">
+
+                <a href="#" target="_blank">
+                  View Project
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+
+                <a href="#" target="_blank">
+                  GitHub
+                  <i class="bi bi-github"></i>
+                </a>
+
+              </div>
+
+            </div>
+
           </article>
 
-          <article class="project card glass reveal">
-            <div class="project-media" style="background-image:url('project3.jpg')"></div>
-            <div class="project-body">
-              <h3>Front-End Pages</h3>
-              <p>Responsive web pages built with modern layouts and attention to usability.</p>
-              <div class="proj-links">
-                <a href="#">View</a><a href="#">Code</a>
+
+          <!-- PROJECT 03 -->
+
+          <article class="project-3d-card reveal">
+
+            <div class="project-visual project-ml">
+
+              <span class="project-index">
+                03
+              </span>
+
+              <div class="project-mockup">
+
+                <div class="project-mockup-bar">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <img
+                  src="project1.jpg"
+                  alt="Heart Disease Prediction dashboard preview"
+                  loading="lazy"
+                >
+
               </div>
+
             </div>
+
+
+            <div class="project-content">
+
+              <span class="project-category">
+                MACHINE LEARNING
+              </span>
+
+              <h3>
+                Heart Disease Prediction
+              </h3>
+
+              <p>
+                A machine learning project focused on predicting
+                heart disease using Python and a trained
+                prediction model.
+              </p>
+
+
+              <div class="project-tech">
+
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>Flask</span>
+
+              </div>
+
+
+              <div class="project-links">
+
+                <a href="#" target="_blank">
+                  Live Demo
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+
+                <a href="#" target="_blank">
+                  GitHub
+                  <i class="bi bi-github"></i>
+                </a>
+
+              </div>
+
+            </div>
+
           </article>
+
+
+          <!-- PROJECT 04 -->
+
+          <article class="project-3d-card reveal">
+
+            <div class="project-visual project-python">
+
+              <span class="project-index">
+                04
+              </span>
+
+              <div class="project-mockup">
+
+                <div class="project-mockup-bar">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <img
+                  src="project2.jpg"
+                  alt="Airline Reservation System preview"
+                  loading="lazy"
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="project-content">
+
+              <span class="project-category">
+                PYTHON APPLICATION
+              </span>
+
+              <h3>
+                Airline Reservation System
+              </h3>
+
+              <p>
+                A Python-based reservation application implementing
+                booking, seat management and data persistence.
+              </p>
+
+
+              <div class="project-tech">
+
+                <span>Python</span>
+                <span>OOP</span>
+                <span>File Handling</span>
+
+              </div>
+
+
+              <div class="project-links">
+
+                <a href="#" target="_blank">
+                  View Project
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+
+                <a href="#" target="_blank">
+                  GitHub
+                  <i class="bi bi-github"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section">
+
+    <!-- =========================================
+         CERTIFICATE
+    ========================================== -->
+
+    <section
+      id="certificate"
+      class="section cinematic-section certificate-section"
+    >
+
+      <div class="section-number">
+        06
+      </div>
+
       <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-grid">
-          <div class="card glass reveal">
-            <h3>Let's connect</h3>
-            <p>Open for internships and front-end work. Message me and I'll reply soon.</p>
-            <ul class="contact-list">
-              <li>✉️ <a href="mailto:m.awaisk118@gmail.com">m.awaisk118@gmail.com</a></li>
-              <li>📞 +92 345 8274831</li>
-              <li>🔗 <a href="https://www.linkedin.com/in/muhammad-awais-376527292" target="_blank">LinkedIn</a></li>
-            </ul>
+
+        <div class="section-heading reveal">
+
+          <span class="section-kicker">
+            CERTIFICATION
+          </span>
+
+          <h2>
+            Learning that
+            <span>builds the future.</span>
+          </h2>
+
+        </div>
+
+
+        <div class="certificate-3d-card reveal">
+
+          <div class="certificate-visual">
+
+            <div class="certificate-glow"></div>
+
+            <i class="bi bi-award"></i>
+
+            <span>
+              NAVTTC
+            </span>
+
           </div>
 
-          <form class="contact-form card glass reveal" action="mailto:m.awaisk118@gmail.com" method="post" enctype="text/plain">
-            <label><span>Name</span><input type="text" name="name" required></label>
-            <label><span>Email</span><input type="email" name="email" required></label>
-            <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
-            <div class="form-actions">
-              <button class="btn btn-primary" type="submit">Send</button>
-              <button type="reset" class="btn btn-outline">Reset</button>
+
+          <div class="certificate-content">
+
+            <span class="certificate-label">
+              PROFESSIONAL TRAINING
+            </span>
+
+            <h3>
+              Data Science & Artificial Intelligence
+            </h3>
+
+            <p>
+              NAVTTC — 3-Month Professional Training
+            </p>
+
+            <div class="certificate-meta">
+
+              <span>
+                <i class="bi bi-patch-check"></i>
+                Certified
+              </span>
+
+              <span>
+                <i class="bi bi-robot"></i>
+                AI / Data Science
+              </span>
+
             </div>
+
+
+            <!-- Add actual certificate file/link later -->
+
+            <a
+              href="certificate.png"
+              class="certificate-btn"
+            >
+              View Certificate
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CONTACT
+    ========================================== -->
+
+    <section
+      id="contact"
+      class="section cinematic-section contact-section"
+    >
+
+      <div class="container">
+
+        <div class="contact-heading reveal">
+
+          <span class="section-kicker">
+            GET IN TOUCH
+          </span>
+
+          <h2>
+            Let's create something
+            <span>extraordinary.</span>
+          </h2>
+
+          <p>
+            Have an idea, project or opportunity?
+            Let's talk about it.
+          </p>
+
+        </div>
+
+
+        <div class="contact-layout">
+
+
+          <div class="contact-info reveal">
+
+            <div class="contact-item">
+
+              <span class="contact-icon">
+                <i class="bi bi-envelope"></i>
+              </span>
+
+              <div>
+
+                <small>EMAIL</small>
+
+                <a href="mailto:m.awaisk118@gmail.com">
+                  m.awaisk118@gmail.com
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <span class="contact-icon">
+                <i class="bi bi-geo-alt"></i>
+              </span>
+
+              <div>
+
+                <small>LOCATION</small>
+
+                <p>
+                  Rawalpindi, Pakistan
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <span class="contact-icon">
+                <i class="bi bi-linkedin"></i>
+              </span>
+
+              <div>
+
+                <small>LINKEDIN</small>
+
+                <a
+                  href="https://www.linkedin.com/in/muhammadawaiscs"
+                  target="_blank"
+                >
+                  Connect with me
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <form
+            class="contact-form reveal"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            id="contact-form"
+          >
+
+            <div class="form-row">
+
+              <label>
+
+                <span>Your Name</span>
+
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                >
+
+              </label>
+
+
+              <label>
+
+                <span>Your Email</span>
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                >
+
+              </label>
+
+            </div>
+
+
+            <label>
+
+              <span>Message</span>
+
+              <textarea
+                name="message"
+                rows="6"
+                placeholder="Tell me about your project..."
+                required
+              ></textarea>
+
+            </label>
+
+
+            <input
+              type="text"
+              name="_gotcha"
+              style="display:none"
+              tabindex="-1"
+              autocomplete="off"
+            >
+
+            <button
+              type="submit"
+              class="send-btn"
+            >
+
+              <span>Send Message</span>
+
+              <i class="bi bi-arrow-up-right"></i>
+
+            </button>
+
+            <p class="form-status" id="form-status" role="status"></p>
+
           </form>
+
         </div>
+
       </div>
+
     </section>
+
   </main>
 
-  <!-- FOOTER -->
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Muhammad Awais • Developer</p>
+
+    <div class="footer-container">
+
+      <div class="footer-brand">
+
+        <a href="#home">
+          Muhammad <span>Awais.</span>
+        </a>
+
+        <p>
+          Web Developer • AI/ML Enthusiast • Python Developer
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          © <span id="year"></span> Muhammad Awais.
+          Portfolo. All rights reserved.
+        </p>
+
+
+        <div class="footer-socials">
+
+          <a
+            href="https://www.linkedin.com/in/muhammadawaiscs"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/awais-site"
+            target="_blank"
+          >
+            GitHub
+          </a>
+
+        </div>
+
+      </div>
+
     </div>
+
   </footer>
 
+
+  <!-- =========================================
+       THREE.JS
+  ========================================== -->
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.178.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.178.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <script type="module">
+
+    import * as THREE from "three";
+
+    import { EffectComposer } from
+      "three/addons/postprocessing/EffectComposer.js";
+
+    import { RenderPass } from
+      "three/addons/postprocessing/RenderPass.js";
+
+    import { UnrealBloomPass } from
+      "three/addons/postprocessing/UnrealBloomPass.js";
+
+    import { OutputPass } from
+      "three/addons/postprocessing/OutputPass.js";
+
+
+    const canvas =
+      document.getElementById("hero-3d");
+
+
+    const scene =
+      new THREE.Scene();
+
+
+    scene.fog =
+      new THREE.FogExp2(
+        0x020308,
+        0.025
+      );
+
+
+    const camera =
+      new THREE.PerspectiveCamera(
+        55,
+        window.innerWidth /
+        window.innerHeight,
+        0.1,
+        100
+      );
+
+
+    camera.position.set(
+      0,
+      0,
+      8
+    );
+
+
+    const renderer =
+      new THREE.WebGLRenderer({
+        canvas,
+        antialias: true,
+        alpha: true
+      });
+
+
+    renderer.setPixelRatio(
+      Math.min(
+        window.devicePixelRatio,
+        2
+      )
+    );
+
+
+    renderer.setSize(
+      window.innerWidth,
+      window.innerHeight
+    );
+
+
+    /* =========================================
+       BLOOM POST-PROCESSING
+    ========================================== */
+
+    const composer =
+      new EffectComposer(renderer);
+
+    composer.addPass(
+      new RenderPass(scene, camera)
+    );
+
+    const bloomPass =
+      new UnrealBloomPass(
+        new THREE.Vector2(
+          window.innerWidth,
+          window.innerHeight
+        ),
+        0.55,
+        0.85,
+        0.15
+      );
+
+    composer.addPass(bloomPass);
+    composer.addPass(new OutputPass());
+
+
+    /* =========================================
+       PARTICLES
+    ========================================== */
+
+    const particleGeometry =
+      new THREE.BufferGeometry();
+
+
+    const particleCount = 2200;
+
+
+    const positions =
+      new Float32Array(
+        particleCount * 3
+      );
+
+
+    for (
+      let i = 0;
+      i < particleCount * 3;
+      i++
+    ) {
+
+      positions[i] =
+        (Math.random() - 0.5) * 40;
+
+    }
+
+
+    particleGeometry.setAttribute(
+      "position",
+      new THREE.BufferAttribute(
+        positions,
+        3
+      )
+    );
+
+
+    const particleMaterial =
+      new THREE.PointsMaterial({
+
+        color: 0x00eaff,
+
+        size: 0.025,
+
+        transparent: true,
+
+        opacity: 0.7
+
+      });
+
+
+    const particles =
+      new THREE.Points(
+        particleGeometry,
+        particleMaterial
+      );
+
+
+    scene.add(particles);
+
+
+    /* =========================================
+       3D CORE
+    ========================================== */
+
+    const coreGeometry =
+      new THREE.IcosahedronGeometry(
+        2.1,
+        2
+      );
+
+
+    const coreMaterial =
+      new THREE.MeshBasicMaterial({
+
+        color: 0x00eaff,
+
+        wireframe: true,
+
+        transparent: true,
+
+        opacity: 0.18
+
+      });
+
+
+    const core =
+      new THREE.Mesh(
+        coreGeometry,
+        coreMaterial
+      );
+
+
+    core.position.set(
+      2.8,
+      0.2,
+      0
+    );
+
+
+    scene.add(core);
+
+
+    /* =========================================
+       INNER CORE
+    ========================================== */
+
+    const innerGeometry =
+      new THREE.IcosahedronGeometry(
+        1.3,
+        1
+      );
+
+
+    const innerMaterial =
+      new THREE.MeshBasicMaterial({
+
+        color: 0x8b5cf6,
+
+        wireframe: true,
+
+        transparent: true,
+
+        opacity: 0.18
+
+      });
+
+
+    const innerCore =
+      new THREE.Mesh(
+        innerGeometry,
+        innerMaterial
+      );
+
+
+    innerCore.position.copy(
+      core.position
+    );
+
+
+    scene.add(innerCore);
+
+
+    /* =========================================
+       LIGHTS
+    ========================================== */
+
+    const ambient =
+      new THREE.AmbientLight(
+        0xffffff,
+        0.6
+      );
+
+
+    scene.add(ambient);
+
+
+    const cyanLight =
+      new THREE.PointLight(
+        0x00eaff,
+        20,
+        14
+      );
+
+
+    cyanLight.position.set(
+      4,
+      2,
+      4
+    );
+
+
+    scene.add(cyanLight);
+
+
+    const purpleLight =
+      new THREE.PointLight(
+        0x8b5cf6,
+        18,
+        12
+      );
+
+
+    purpleLight.position.set(
+      -4,
+      -2,
+      3
+    );
+
+
+    scene.add(purpleLight);
+
+
+    /* =========================================
+       MOUSE
+    ========================================== */
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+
+    window.addEventListener(
+      "mousemove",
+      (event) => {
+
+        mouseX =
+          event.clientX /
+          window.innerWidth -
+          0.5;
+
+
+        mouseY =
+          event.clientY /
+          window.innerHeight -
+          0.5;
+
+      }
+    );
+
+
+    /* =========================================
+       SCROLL-DRIVEN MOVEMENT
+    ========================================== */
+
+    let scrollFraction = 0;
+    let targetScrollFraction = 0;
+
+
+    function updateScrollFraction() {
+
+      const maxScroll =
+        document.documentElement.scrollHeight -
+        window.innerHeight;
+
+      targetScrollFraction =
+        maxScroll > 0
+          ? window.scrollY / maxScroll
+          : 0;
+
+    }
+
+
+    window.addEventListener(
+      "scroll",
+      updateScrollFraction,
+      { passive: true }
+    );
+
+    updateScrollFraction();
+
+
+    /* =========================================
+       ANIMATION
+    ========================================== */
+
+    const clock =
+      new THREE.Clock();
+
+
+    function animate() {
+
+      requestAnimationFrame(
+        animate
+      );
+
+
+      const time =
+        clock.getElapsedTime();
+
+
+      scrollFraction +=
+        (
+          targetScrollFraction -
+          scrollFraction
+        ) * 0.045;
+
+
+      particles.rotation.y =
+        time * 0.012;
+
+
+      particles.rotation.x =
+        time * 0.004;
+
+
+      core.rotation.x =
+        time * 0.18;
+
+
+      core.rotation.y =
+        time * 0.28;
+
+
+      innerCore.rotation.x =
+        -time * 0.25;
+
+
+      innerCore.rotation.y =
+        -time * 0.18;
+
+
+      core.position.y =
+        0.2 +
+        Math.sin(
+          time * 0.8
+        ) * 0.12;
+
+
+      innerCore.position.y =
+        core.position.y;
+
+
+      /* travel through the scene as the page scrolls */
+
+      core.position.x =
+        2.8 + scrollFraction * 4.2;
+
+      core.position.z =
+        -scrollFraction * 7;
+
+      innerCore.position.x =
+        core.position.x;
+
+      innerCore.position.z =
+        core.position.z;
+
+      scene.rotation.y =
+        scrollFraction * 0.55;
+
+      camera.position.z =
+        8 - scrollFraction * 2.6;
+
+      bloomPass.strength =
+        0.55 + scrollFraction * 0.4;
+
+
+      camera.position.x +=
+        (
+          mouseX * 0.55 -
+          camera.position.x
+        ) * 0.025;
+
+
+      camera.position.y +=
+        (
+          -mouseY * 0.35 -
+          camera.position.y
+        ) * 0.025;
+
+
+      camera.lookAt(
+        1,
+        0,
+        0
+      );
+
+
+      composer.render();
+
+    }
+
+
+    animate();
+
+
+    /* =========================================
+       RESIZE
+    ========================================== */
+
+    window.addEventListener(
+      "resize",
+      () => {
+
+        camera.aspect =
+          window.innerWidth /
+          window.innerHeight;
+
+
+        camera.updateProjectionMatrix();
+
+
+        renderer.setSize(
+          window.innerWidth,
+          window.innerHeight
+        );
+
+
+        composer.setSize(
+          window.innerWidth,
+          window.innerHeight
+        );
+
+
+        updateScrollFraction();
+
+      }
+    );
+
+  </script>
+
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
+  <!-- Main JS -->
   <script src="script.js"></script>
+
 </body>
 </html>
