@@ -215,9 +215,11 @@ textarea {
 
   background: #020308;
 
+  cursor: pointer;
+
   transition:
-    opacity .9s ease,
-    visibility .9s ease;
+    opacity .6s ease,
+    visibility .6s ease;
 }
 
 #scene-loader.hidden {
@@ -1477,6 +1479,8 @@ textarea {
 
   border: 1px solid var(--border);
 
+  overflow: hidden;
+
   background:
     linear-gradient(
       145deg,
@@ -1487,9 +1491,39 @@ textarea {
   transition:
     transform .5s var(--ease),
     border-color .4s ease,
-    background .4s ease;
+    background .4s ease,
+    box-shadow .5s ease;
 
   transform-style: preserve-3d;
+}
+
+.skill-3d-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 5;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      115deg,
+      transparent 42%,
+      rgba(255,255,255,.05) 48%,
+      rgba(255,255,255,.14) 50%,
+      rgba(255,255,255,.05) 52%,
+      transparent 58%
+    );
+
+  transform: translateX(-140%);
+
+  transition: transform .9s ease;
+}
+
+.skill-3d-card:hover::before {
+  transform: translateX(140%);
 }
 
 .skill-3d-card:hover {
@@ -1508,6 +1542,27 @@ textarea {
       rgba(0,234,255,.055),
       rgba(255,255,255,.012)
     );
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.45),
+    0 0 30px rgba(0,234,255,.07);
+}
+
+.skill-card-top i {
+  animation: iconFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
 }
 
 .skill-card-top {
@@ -1697,6 +1752,8 @@ textarea {
 }
 
 .project-3d-card {
+  position: relative;
+
   border: 1px solid var(--border);
 
   background:
@@ -1706,9 +1763,39 @@ textarea {
 
   transition:
     transform .5s var(--ease),
-    border-color .4s ease;
+    border-color .4s ease,
+    box-shadow .5s ease;
 
   transform-style: preserve-3d;
+}
+
+.project-3d-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 6;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      115deg,
+      transparent 42%,
+      rgba(255,255,255,.05) 48%,
+      rgba(255,255,255,.14) 50%,
+      rgba(255,255,255,.05) 52%,
+      transparent 58%
+    );
+
+  transform: translateX(-140%);
+
+  transition: transform 1s ease;
+}
+
+.project-3d-card:hover::before {
+  transform: translateX(140%);
 }
 
 .project-3d-card:hover {
@@ -1720,6 +1807,10 @@ textarea {
 
   border-color:
     rgba(0,234,255,.22);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.55),
+    0 0 40px rgba(0,234,255,.08);
 }
 
 .project-visual {

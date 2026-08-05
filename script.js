@@ -5,17 +5,66 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   /* =======================================================
-     LOADER
+     LOADER — fast boot sequence, capped under 1s,
+     click anywhere to skip
   ======================================================= */
 
   const loader = document.getElementById("scene-loader");
+  const loaderStatus = document.getElementById("loader-status");
+
+  const bootLines = [
+    "INITIALIZING",
+    "LOADING INTERFACE",
+    "WELCOME, MUHAMMAD AWAIS"
+  ];
+
+  let loaderHidden = false;
+
+  function hideLoader() {
+
+    if (loaderHidden) return;
+
+    loaderHidden = true;
+
+    if (loader) {
+      loader.classList.add("hidden");
+    }
+
+  }
+
+  if (loaderStatus) {
+
+    let lineIndex = 0;
+
+    loaderStatus.textContent = bootLines[0];
+
+    const bootInterval = setInterval(() => {
+
+      lineIndex++;
+
+      if (lineIndex >= bootLines.length) {
+        clearInterval(bootInterval);
+        return;
+      }
+
+      loaderStatus.textContent = bootLines[lineIndex];
+
+    }, 260);
+
+  }
+
+  if (loader) {
+
+    loader.addEventListener("click", hideLoader);
+
+  }
+
+  /* hard cap: never keep the loader up longer than ~950ms,
+     regardless of asset load time */
+  setTimeout(hideLoader, 950);
 
   window.addEventListener("load", () => {
-    setTimeout(() => {
-      if (loader) {
-        loader.classList.add("hidden");
-      }
-    }, 700);
+    setTimeout(hideLoader, 350);
   });
 
 });
@@ -403,6 +452,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
       }
     );
+
+  });
+
+
+  /* =======================================================
+     MAGNETIC BUTTONS
+  ======================================================= */
+
+  const magneticTargets =
+    document.querySelectorAll(
+      ".hero-btn, .nav-cta, .send-btn"
+    );
+
+  magneticTargets.forEach(button => {
+
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      return;
+    }
+
+    button.addEventListener("mousemove", event => {
+
+      const rect =
+        button.getBoundingClientRect();
+
+      const x =
+        event.clientX - rect.left - rect.width / 2;
+
+      const y =
+        event.clientY - rect.top - rect.height / 2;
+
+      button.style.transform =
+        `translate(${x * 0.25}px, ${(y * 0.35) - 3}px)`;
+
+    });
+
+    button.addEventListener("mouseleave", () => {
+
+      button.style.transform = "";
+
+    });
 
   });
 
