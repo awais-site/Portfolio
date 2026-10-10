@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FF OES Internship Certificate | Muhammad Awais</title>
+
+ <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 30px 16px;
+    background: #080d16;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  h1 {
+    text-align: center;
+    color: #55eaff;
+    font-size: clamp(24px, 4vw, 36px);
+    margin-bottom: 10px;
+  }
+
+  p {
+    text-align: center;
+    color: #b8c5d8;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+
+  /* Both certificates side by side */
+  .certificate-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start;
+  }
+
+  .certificate-image {
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid rgba(85, 234, 255, 0.3);
+    border-radius: 14px;
+    background: #101927;
+    box-shadow: 0 0 25px rgba(0, 200, 255, 0.08);
+  }
+
+  .certificate-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  /* Stack on small screens */
+  @media (max-width: 600px) {
+    .certificate-gallery {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+</head>
+
+<body>
+  <main class="container">
+
+    <h1>FF OES Internship Certificate</h1>
+
+    <p>
+      Fauji Foundation — Overseas Employment Services<br>
+      Summer Internship Program 2026
+    </p>
+ 
+<div class="certificate-gallery">
+
+  <div class="certificate-image">
+    <img
+      src="./Internship.png"
+      alt="FF OES Internship Certificate - Image 1"
+    >
+  </div>
+
+  <div class="certificate-image">
+    <img
+      src="./Internship-Image.png"
+      alt="FF OES Internship Certificate - Image 2"
+    >
+  </div>
+
+</div>
+
+  </main>
+</body>
+</html>
